@@ -1,42 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
 }
 
 h1, h2 {
-    color: #333;
+    color: #343a40;
 }
 
-#searchInput {
+input[type="text"] {
     padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: calc(100% - 22px - 80px);
     margin-right: 10px;
-    width: 200px;
+    box-sizing: border-box;
 }
 
-#searchBtn {
-    padding: 10px;
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-#results {
-    margin-top: 20px;
+button:hover {
+    background-color: #0056b3;
 }
 
 .card {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
     padding: 20px;
-    list-style-type: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-#playlist {
-    list-style-type: none;
+.card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
 }
 
-.playlist-item {
-    background-color: #ddd;
+.card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+#results, #playlist {
+    margin-top: 20px;
+}
+
+.removeBtn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: start;
     margin-top: 10px;
-    padding: 10px;
+}
+
+.removeBtn:hover {
+    background-color: #c82333;
+}
+
+.addBtn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: start;
+    margin-top: 10px;
+}
+
+.addBtn:hover {
+    background-color: #218838;
+}
+
+#searchInput {
+    flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+    input[type="text"], button {
+        width: 100%;
+        margin: 5px 0;
+    }
 }

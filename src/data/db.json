@@ -1,13 +1,50 @@
 {
     "artists": [
-        {
-            "idArtist":"111239",
-            "strArtist":"Coldplay",
-            "strLabel":"Parlophone",
-            "intFormedYear":"1996",
-            "strStyle":"Rock/Pop",
-            "strGenre":"Alternative Rock",
-            "strBiographyEN":"Coldplay are a British rock band formed in London in 1997. They consist of vocalist and pianist Chris Martin, guitarist Jonny Buckland, bassist Guy Berryman, drummer Will Champion and manager Phil Harvey."
-        }
+      {
+        "idArtist": "111239",
+        "strArtist": "Coldplay",
+        "strLabel": "Parlophone",
+        "intFormedYear": "1996",
+        "strStyle": "Rock/Pop",
+        "strGenre": "Alternative Rock",
+        "strBiographyEN": "Coldplay are a British rock band formed in London in 1997. They consist of vocalist and pianist Chris Martin, guitarist Jonny Buckland, bassist Guy Berryman, drummer Will Champion and manager Phil Harvey."
+      },
+      {
+        "idArtist": "112024",
+        "strArtist": "Adele",
+        "strLabel": "XL Recordings",
+        "intFormedYear": "2006",
+        "strStyle": "Pop",
+        "strGenre": "Soul",
+        "strBiographyEN": "Adele Laurie Blue Adkins MBE is an English singer-songwriter. After graduating from the BRIT School in 2006, Adele signed a record deal with XL Recordings."
+      },
+      {
+        "idArtist": "105451",
+        "strArtist": "Drake",
+        "strLabel": "OVO Sound",
+        "intFormedYear": "2001",
+        "strStyle": "Hip Hop",
+        "strGenre": "Rap",
+        "strBiographyEN": "Aubrey Drake Graham is a Canadian rapper, singer, songwriter, actor, producer, and entrepreneur. A prominent figure in popular music, Drake is credited for popularizing the Toronto sound."
+      },
+      {
+        "idArtist": "114288",
+        "strArtist": "Beyoncé",
+        "strLabel": "Parkwood Entertainment",
+        "intFormedYear": "1997",
+        "strStyle": "Pop/R&B",
+        "strGenre": "R&B",
+        "strBiographyEN": "Beyoncé Giselle Knowles-Carter is an American singer, songwriter, record producer, and actress. Born and raised in Houston, Texas, Beyoncé performed in various singing and dancing competitions as a child."
+      },
+      {
+        "idArtist": "103860",
+        "strArtist": "Radiohead",
+        "strLabel": "XL Recordings",
+        "intFormedYear": "1985",
+        "strStyle": "Alternative/Indie",
+        "strGenre": "Alternative Rock",
+        "strBiographyEN": "Radiohead are an English rock band formed in Abingdon, Oxfordshire, in 1985. The band consists of Thom Yorke, brothers Jonny Greenwood and Colin Greenwood, Ed O'Brien, and Philip Selway."
+      }
     ]
-}
+  }
+  
