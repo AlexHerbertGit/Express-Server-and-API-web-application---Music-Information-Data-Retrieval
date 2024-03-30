@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#Firebase-json-file
+src/web601-api-backend-firebase-adminsdk-c1t1q-298be85caf.json

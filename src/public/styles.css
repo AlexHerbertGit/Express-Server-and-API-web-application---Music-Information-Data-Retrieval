@@ -20,6 +20,7 @@ input[type="text"] {
 
 button {
     padding: 10px 15px;
+    margin: 10px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -64,7 +65,7 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    align-self: start;
+    align-self: center;
     margin-top: 10px;
 }
 

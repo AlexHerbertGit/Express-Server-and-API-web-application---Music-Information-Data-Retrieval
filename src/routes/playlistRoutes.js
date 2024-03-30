@@ -1,18 +1,24 @@
-//playlistRoute.js
+// playlistRoutes.js
 
-//Initialize varibles
+// Initialize variables
 const express = require('express');
 const router = express.Router();
 
-//Controller variables
+// Controller variables
 const playlistController = require('../controllers/playlistController');
 
-//POST route for creating a new playlist
+// POST route for creating a new playlist
 router.post('/', playlistController.createPlaylist);
 
-//GET rouite for retreiving playlists from database
+// GET route for retrieving playlists from database
 router.get('/:playlistName', playlistController.getPlaylistByName);
 
-//Additional Routes go here
+// PUT route for modifying playlists and saving to database
+router.put('/:playlistName', playlistController.updatePlaylistByName); 
+
+// DELETE route for deleting playlists
+router.delete('/:playlistName', playlistController.deletePlaylistByName); 
+
+// Additional Routes go here
 
 module.exports = router;

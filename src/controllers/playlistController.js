@@ -23,7 +23,6 @@ exports.createPlaylist = async (req, res) => {
 };
 
 //Function that gets a specific playlist from the database.
-
 exports.getPlaylistByName = async (req, res) => {
     const { playlistName } = req.params
 
@@ -41,4 +40,48 @@ exports.getPlaylistByName = async (req, res) => {
         console.error('Error fetching playlist by name:', error)
         res.status(500).send('Internal Server Error')
     }
-;}
+};
+
+//Update playlist function 
+exports.updatePlaylistByName = async (req, res) => {
+    const { playlistName } = req.params
+    const updatedData = req.body; //Updated playlist data from frontend.
+
+    try {
+        const playlistRef = db.collection('playlists').where('name', '==', playlistName)
+        const snapshot = await playlistRef.get();
+
+        if (snapshot.empty) {
+            return res.status(404).send("Playlist not found");
+        }
+
+        const doc = snapshot.docs[0];
+        await doc.ref.update(updatedData)
+
+        res.json({ msg: "Playlist Updated", id: doc.id });
+    } catch (error) {
+        console.error("Error updating playlist:", error)
+        res.status(500).send("Internal Server Error")
+    }
+};
+
+//Delete playlist by name function
+exports.deletePlaylistByName = async (req, res) => {
+    const { playlistName } = req.params;
+    try {
+        const playlistsRef = db.collection('playlists');
+        const snapshot = await playlistsRef.where('name', '==', playlistName).get();
+
+        if (snapshot.empty) {
+            return res.status(404).send({ message: 'Playlist not found' });
+        }
+
+        // delete all matches (should typically be just one)
+        snapshot.forEach(doc => doc.ref.delete());
+
+        res.json({ message: 'Playlist deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting playlist:', error);
+        res.status(500).send({ message: 'Internal Server Error' });
+    }
+};
