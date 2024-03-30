@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const artistRoutes = require('./routes/artistRoutes');
+const playlistRoutes = require('./routes/playlistRoutes');
 const cors = require('cors');
 
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(cors());
 
 //Routes
 app.use('/api', artistRoutes); //Mounts artist routes on /api.
+app.use('/api/playlists', playlistRoutes); //Mounts playlist routes on /api.
 
 
 app.get('/', (req, res) => {
