@@ -11,13 +11,22 @@
     <input type="text" id="searchInput" placeholder="Search for an artist...">
     <button id="searchBtn">Search</button>
 
-    <div id="results"></div>
+    <div id="results"></div> <!-- Container for artist search results -->
 
     <h2>Playlist</h2>
-    <ul id="playlist"></ul>
+    <div id="playlist"></div> <!-- Changed from <ul> to <div> for consistency -->
 
+    <!-- Playlist Search Section -->
+    <div id="playlistSearch">
+        <input type="text" id="playlistSearchInput" placeholder="Search for a playlist">
+        <button id="playlistSearchBtn">Search For Playlist</button>
+    </div>
+    <div id="playlistResults"></div> <!-- Container for displaying playlist search results -->
+
+    <!-- Save Playlist Button -->
     <button id="savePlaylistBtn">Save Playlist</button>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
